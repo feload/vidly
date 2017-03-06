@@ -1,0 +1,26 @@
+﻿@using Vidly.Models
+@model List<Movie>
+
+@{
+    ViewBag.Title = "Movies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-4">        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var m in Model) { 
+                <tr>
+                    <th>@m.Name</th>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
