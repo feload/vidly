@@ -7,7 +7,7 @@ using Vidly.Models;
 using Vidly.ViewModels;
 
 namespace Vidly.Controllers
-{
+{  
     public class MoviesController : Controller
     {
         // GET: Movies

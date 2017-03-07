@@ -9,24 +9,26 @@ namespace Vidly.Controllers
 {
     public class CustomersController : Controller
     {
-        private readonly List<Customer> _customers;
+        private Context _context;
         public CustomersController()
         {
-            _customers = new List<Customer>()
-            {
-                new Customer() { Id = 1, Name = "Juan" },
-                new Customer() { Id = 2, Name = "Petra" },
-            };
+            _context = new Context();
         }
-        // GET: Customers
+        
+
         public ActionResult Index()
         {
-            return View(_customers);
+            var customers = _context.Customers;
+            return View(customers.ToList());
         }
 
         public ActionResult Details(int Id)
         {
-            return View(_customers.Find(c => c.Id == Id));
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == Id);
+            if (customer == null)
+                return HttpNotFound();
+
+            return View(customer);
         }
     }
 }
