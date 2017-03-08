@@ -182,6 +182,14 @@
     <Compile Include="Migrations\201703070439542_ApplyAnnotationsToCustomerName.Designer.cs">
       <DependentUpon>201703070439542_ApplyAnnotationsToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703080307078_AddDescriptionToMembershipTyoe.cs" />
+    <Compile Include="Migrations\201703080307078_AddDescriptionToMembershipTyoe.Designer.cs">
+      <DependentUpon>201703080307078_AddDescriptionToMembershipTyoe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703080308257_PopulateMembershipTypeDescription.cs" />
+    <Compile Include="Migrations\201703080308257_PopulateMembershipTypeDescription.Designer.cs">
+      <DependentUpon>201703080308257_PopulateMembershipTypeDescription.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Context.cs" />
@@ -268,6 +276,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703070439542_ApplyAnnotationsToCustomerName.resx">
       <DependentUpon>201703070439542_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703080307078_AddDescriptionToMembershipTyoe.resx">
+      <DependentUpon>201703080307078_AddDescriptionToMembershipTyoe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703080308257_PopulateMembershipTypeDescription.resx">
+      <DependentUpon>201703080308257_PopulateMembershipTypeDescription.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
