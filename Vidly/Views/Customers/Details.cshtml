@@ -6,4 +6,10 @@
 
 <h2>Details</h2>
 
-@Model.Name
+<ul>
+    <li>@Model.Name</li>
+    @if (!String.IsNullOrEmpty(Model.Birthday.ToString()))
+    {
+    <li>@Model.Birthday</li>
+    }
+</ul>
