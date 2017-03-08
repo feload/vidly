@@ -194,9 +194,18 @@
     <Compile Include="Migrations\201703080318502_AddBirthdayToCustomer.Designer.cs">
       <DependentUpon>201703080318502_AddBirthdayToCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703080405170_AddMovieDetailsGenre.cs" />
+    <Compile Include="Migrations\201703080405170_AddMovieDetailsGenre.Designer.cs">
+      <DependentUpon>201703080405170_AddMovieDetailsGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703080406317_PupulateGenresTable.cs" />
+    <Compile Include="Migrations\201703080406317_PupulateGenresTable.Designer.cs">
+      <DependentUpon>201703080406317_PupulateGenresTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Context.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -253,6 +262,7 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -289,6 +299,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703080318502_AddBirthdayToCustomer.resx">
       <DependentUpon>201703080318502_AddBirthdayToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703080405170_AddMovieDetailsGenre.resx">
+      <DependentUpon>201703080405170_AddMovieDetailsGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703080406317_PupulateGenresTable.resx">
+      <DependentUpon>201703080406317_PupulateGenresTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

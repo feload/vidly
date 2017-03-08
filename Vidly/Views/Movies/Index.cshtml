@@ -17,7 +17,7 @@
             <tbody>
                 @foreach (var m in Model) { 
                 <tr>
-                    <th>@m.Name</th>
+                    <th>@Html.ActionLink(@m.Name, "Details", new { Id = m.Id })</th>
                 </tr>
                 }
             </tbody>
