@@ -203,6 +203,7 @@
       <DependentUpon>201703080406317_PupulateGenresTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AdultMember.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Models\Genre.cs" />
