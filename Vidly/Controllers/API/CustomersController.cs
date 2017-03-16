@@ -37,11 +37,11 @@ namespace Vidly.Controllers.API
 
         // Post /api/customer
         [HttpPost]
-        public IHttpActionResult CreateCustomer(CustomerDTO customerDTO)
+        public CustomerDTO CreateCustomer(CustomerDTO customerDTO)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest();
+                throw new HttpResponseException(HttpStatusCode.BadRequest);
             }
             
             var customer = Mapper.Map<CustomerDTO, Customer>(customerDTO);
@@ -49,13 +49,13 @@ namespace Vidly.Controllers.API
             _context.SaveChanges();
 
             customerDTO.Id = customer.Id;
-            return Created(new Uri(Request.RequestUri + "/" + customer.Id), customerDTO);
-            
+
+            return customerDTO;            
         }
 
         // Put /api/customer/1
         [HttpPut]
-        public CustomerDTO UpdateCustomer(int Id, CustomerDTO customerDTO)
+        public void UpdateCustomer(int Id, CustomerDTO customerDTO)
         {
             if (!ModelState.IsValid)
             {
@@ -69,9 +69,7 @@ namespace Vidly.Controllers.API
             }
 
             Mapper.Map(customerDTO, customerInDb);
-            _context.SaveChanges();
-
-            return customerDTO;
+            _context.SaveChanges();            
         }
 
         // Delete /api/customer/1
